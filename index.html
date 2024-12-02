@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>3 Different Color</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #171b26;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s ease-in-out;
+        }
+        h1 {
+            margin-bottom: 20px;
+            transition: all 0.5s ease-in-out;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .button-container {
+            text-align: center;
+        }
+        button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        #boysThemeBtn {
+            background-color: #1E3A8A; 
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        #girlsThemeBtn {
+            background-color: #FF69B4; 
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        #oldThemeBtn {
+            background-color: #7d4e4e; 
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .boys-theme {
+            background-image: url(img/photo3.jpg);
+        }
+        .boys-theme h1 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .girls-theme {
+            background-image: url(img/photo4.jpg); 
+        }
+        .girls-theme h1 {
+            font-family: 'Brush Script MT', cursive;
+        }
+        .old-theme {
+            background-image: url(img/photo1.jpg); 
+        }
+        .old-theme h1 {
+            font-family: 'Times New Roman', serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="title">Welcome to Theme Changer</h1>
+    <div class="button-container">
+        <button id="boysThemeBtn">Boys Theme</button>
+        <button id="girlsThemeBtn">Girls Theme</button>
+        <button id="oldThemeBtn">Old Theme</button>
+    </div>
+
+    <script>
+        
+        const boysThemeBtn = document.getElementById("boysThemeBtn");
+        const girlsThemeBtn = document.getElementById("girlsThemeBtn");
+        const oldThemeBtn = document.getElementById("oldThemeBtn");
+        const title = document.getElementById("title");
+
+       
+        boysThemeBtn.addEventListener("click", () => {
+            document.body.className = "boys-theme";
+            title.textContent = "Welcome to Boys' World!";
+        });
+
+        girlsThemeBtn.addEventListener("click", () => {
+            document.body.className = "girls-theme";
+            title.textContent = "Welcome to Girls' Paradise!";
+        });
+
+        oldThemeBtn.addEventListener("click", () => {
+            document.body.className = "old-theme";
+            title.textContent = "Welcome to the Classic Era!";
+        });
+    </script>
+</body>
+</html>
